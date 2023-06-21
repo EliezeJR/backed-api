@@ -44,7 +44,7 @@ export class EstudiantesService {
   }
 
   findAll() {
-    return this.estudianteRepository.find();
+    return this.estudianteRepository.find({ relations: ['generos'] });
   }
 
   findOne(id: number) {
