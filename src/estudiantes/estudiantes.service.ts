@@ -43,7 +43,7 @@ export class EstudiantesService {
     return model;
   }
 
-  findAll() {
+  async findAll() {
     return this.estudianteRepository.find({ relations: ['generos'] });
   }
 
